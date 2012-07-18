@@ -170,6 +170,7 @@ set(cockatrice_TS
 #        translations/cockatrice_fr.ts
         translations/cockatrice_it.ts
         translations/cockatrice_ja.ts
+	translations/cockatrice_no.ts
 #        translations/cockatrice_pl.ts
 #        translations/cockatrice_pt-br.ts
         translations/cockatrice_pt.ts
