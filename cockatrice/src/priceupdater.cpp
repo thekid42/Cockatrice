@@ -56,7 +56,9 @@ void PriceUpdater::downloadFinished()
         QVariantMap map = it.next().toMap();
         QString name = map.value("name").toString().toLower();
         float price = map.value("average").toString().toFloat();
-        cardsPrice.insert(name, price);
+        if ((cardsPrice.find(name) == cardsPrice.end()) || (price < cardsPrice[name])) {
+            cardsPrice.insert(name, price);
+        }
     }
     
     InnerDecklistNode *listRoot = deck->getRoot();
